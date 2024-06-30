@@ -3,6 +3,7 @@
     "@fortawesome/fontawesome-free": "^6.5.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
+    "framer-motion": "^11.2.6",
     "nodemailer": "^6.9.13",
     "pg": "^8.11.5"
   }

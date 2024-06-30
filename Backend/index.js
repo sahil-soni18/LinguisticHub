@@ -2,9 +2,19 @@ import express from 'express';
 import pg from "pg";
 import cors from "cors";
 import dotenv from 'dotenv';
+import nodemailer from 'nodemailer';
+
 
 // Load environment variables from .env file
 dotenv.config();
+// Create a transporter object using SMTP transport
+const transporter = nodemailer.createTransport({
+  service: 'Gmail',
+  auth: {
+      user: process.env.VITE_MAIL_USER, // Your email address
+      pass: process.env.VITE_MAIL_PASSWORD   // Your email password
+  }
+});
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -94,18 +104,48 @@ app.get('/contact', async (req, res) => {
 });
 
 // Route to handle form submission and insert data into the database
+// Route to handle form submission and insert data into the database
 app.post('/submit-form', async (req, res) => {
   try {
     const { name, email, phone, subject, message } = req.body;
 
     console.log('Inserting form data into the database');
 
-    // Inserting form data into the contact_info table
+    // Inserting form data into the client_info table
     const query = `
       INSERT INTO client_info (name, email, phone, subject, message)
       VALUES ($1, $2, $3, $4, $5)
     `;
     await client.query(query, [name, email, phone, subject, message]);
+
+    // Constructing the email body
+    const emailBody = `
+      Name: ${name}
+      Email: ${email}
+      Phone: ${phone}
+
+      Message:
+      ${message}
+    `;
+
+    // Mail options
+    const mailOptions = {
+        from: process.env.VITE_MAIL_USER,
+        to: process.env.VITE_TOMAIL_USER,
+        subject: subject,
+        text: emailBody
+    };
+
+    // Send email
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.error(error);
+            res.status(500).send('Error sending email');
+        } else {
+            console.log('Email sent: ' + info.response);
+            res.status(200).send('Email sent successfully');
+        }
+    });
 
     res.status(200).send('Form data inserted successfully');
   } catch (err) {
@@ -113,6 +153,7 @@ app.post('/submit-form', async (req, res) => {
     res.status(500).send('Error inserting form data into the database');
   }
 });
+
 
 // Route to fetch language data from the database based on ID and send it to the client
 app.get('/languages/:id', async (req, res) => {
@@ -163,6 +204,34 @@ app.get('/footer', async (req, res) => {
     res.status(500).send('Error fetching footer data from the database');
   }
 });
+
+
+
+
+
+// // Example route for sending an email
+// app.post('/send-email', (req, res) => {
+//     // const { to, subject, text } = req.body;
+
+//     // // Mail options
+//     // const mailOptions = {
+//     //     from: 'your-email@gmail.com',
+//     //     to: to,
+//     //     subject: subject,
+//     //     text: text
+//     // };
+
+//     // // Send email
+//     // transporter.sendMail(mailOptions, (error, info) => {
+//     //     if (error) {
+//     //         console.error(error);
+//     //         res.status(500).send('Error sending email');
+//     //     } else {
+//     //         console.log('Email sent: ' + info.response);
+//     //         res.status(200).send('Email sent successfully');
+//     //     }
+//     // });
+// });
 
 
 app.listen(port, () => {
