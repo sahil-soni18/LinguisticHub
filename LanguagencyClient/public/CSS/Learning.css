@@ -1,0 +1,38 @@
+// Learning.css
+.learning-container {
+  padding: 40px 0;
+  background: linear-gradient(to bottom right, #f5f5f5, #e0e0e0); /* Gradient background */
+}
+
+.learning-heading {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.learning-card {
+  background: linear-gradient(to bottom right, #ffffff, #f0f0f0); /* Gradient background for cards */
+  border: none; /* Remove border */
+  border-radius: 8px; /* More rounded corners for cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow for cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0.5rem; /* Adjust margin between cards for spacing */
+  text-align: center; /* Center text within cards */
+  cursor: pointer; /* Indicate hover interaction for cards */
+}
+
+.learning-card:hover {
+  transform: translateY(-5px); /* Lift cards more on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+.language-icon {
+  width: 3rem; /* Larger icon size */
+  height: 3rem; /* Larger icon size */
+  margin-right: 10px; /* Add spacing between icon and text */
+}
+
+.language-name {
+  font-weight: bold; /* Make language name bold */
+  font-size: 1.2rem; /* Increase font size */
+}

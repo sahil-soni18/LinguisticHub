@@ -1,0 +1,46 @@
+.custom-form {
+    background-color: #f7f7f7;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .custom-form .form-label {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .custom-form .form-control {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .custom-form .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+  }
+  
+  .custom-form .form-control::placeholder {
+    color: #888;
+  }
+  
+  .custom-button {
+    width: 100%;
+    background-color: #007bff;
+    border: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-button:hover {
+    background-color: #0056b3;
+  }
+  

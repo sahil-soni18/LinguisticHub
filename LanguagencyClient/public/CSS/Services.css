@@ -1,0 +1,81 @@
+/* Services.css */
+
+.services-container {
+    padding: 40px 0;
+  }
+  
+  .services-heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  .service-card {
+    border: none;
+    transition: transform 0.3s ease;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .service-title {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .service-description {
+    font-size: 1rem;
+    color: #fff;
+  }
+  
+  /* Unique styles for each service card */
+  .service-card-1 {
+    background-color: #ff6b6b; /* Red background */
+    /* height: 1000px; */
+  }
+  .service-card-1.card {
+    background-color: #ff6b6b; /* Red background */
+    /* height: 1000px; */
+    box-shadow: 0.5vh 2vh 5vh rgba(0, 0, 0, 1);
+  }
+  
+  .service-card-2.card {
+    background-color: #6ab0f7; /* Blue background */
+    box-shadow: 0.5vh 2vh 5vh rgba(0, 0, 0, 1);
+  }
+  
+  .service-card-3.card {
+    background-color: #00d68f; /* Green background */
+    box-shadow: 0.5vh 2vh 5vh rgba(0, 0, 0, 1);
+  }
+  
+  .service-card-4.card {
+    background-color: #ffcc57; /* Yellow background */
+    box-shadow: 0.5vh 2vh 5vh rgba(0, 0, 0, 1);
+  }
+  
+  .service-card-5.card {
+    background-color: #ff5e57; /* Orange background */
+    box-shadow: 0.5vh 2vh 5vh rgba(0, 0, 0, 1);
+  }
+  
+  .service-card-6.card {
+    box-shadow: 0.5vh 2vh 5vh rgba(0, 0, 0, 1);
+    background-color: #48dbfb; /* Light Blue background */
+  }
+  
+  /* Hover effects */
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .cardBody {
+    cursor: pointer;
+  }
+
+/* In your CSS file (e.g., Services.css) */
+.link {
+  text-decoration: none !important; /* Remove underline */
+  color: inherit; /* Inherit color from parent */
+}

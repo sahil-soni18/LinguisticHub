@@ -1,0 +1,34 @@
+/* Fact.css */
+
+.fact-container {
+    padding: 40px 0;
+    /* width: 10vw; */
+  }
+  
+  .fact-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .fact-content {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .fact-card {
+    border: 0.5vw solid transparent;
+    background-color: #b6c5d5; 
+    /* width: 10vw; */
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+
+.card-Body {
+  width: 35vw;
+  background-color: #e5ebf1; 
+}
+  

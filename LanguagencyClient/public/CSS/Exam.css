@@ -1,0 +1,126 @@
+.language-card {
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+
+.language-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.languages-info {
+  margin-top: 23vh;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  background-color: rgb(146 167 183);
+}
+
+.language-exams-heading {
+  margin: 2rem;
+  text-shadow: 21px 12px 5px rgba(69, 89, 188, 0.3);
+}
+
+.text-content {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+.examContainer {
+  margin-top: 15vh;
+  margin-left: 15vw;
+}
+
+.examInfo {
+  margin: 2vw;
+  border-radius: 1rem;
+  width: 50vw;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+.adjustPosition {
+  position: relative;
+  top: 18vh;
+  text-shadow: 21px 12px 5px rgba(69, 89, 188, 0.3);
+}
+
+.exam-names-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.exam-name {
+  text-align: center;
+  margin: 0 10px;
+}
+
+.exam-name:hover {
+  cursor: grabbing;
+  color: blueviolet;
+}
+
+.circular-image {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+}
+
+.exam-name:nth-child(odd) .circular-image {
+  background-color: #f0f0f0;
+}
+
+.exam-name:nth-child(even) .circular-image {
+  background-color: #e0e0e0;
+}
+
+.examImage {
+  width: 12vw;
+  height: 20vh;
+  border-radius: 50%;
+  margin-bottom: 10vh;
+}
+
+.DELF {
+  position: relative;
+  left: 25vw;
+}
+
+.DELE {
+  position: relative;
+  left: 17vw;
+  top: 35vh;
+}
+
+.Goethe-Zertifikat {
+  position: relative;
+  right: 22vw;
+  top: 35vh;
+}
+
+.TORFL {
+  position: relative;
+  right: 15vw;
+}
+
+.IELTS-Container:hover {
+  background-color: rgb(43, 181, 82);
+  color: rgb(20, 32, 32);
+  font-style: italic;
+}

@@ -1,0 +1,58 @@
+.services-container {
+  background-color: #f5f5f5; /* Light gray background */
+}
+
+.hero {
+  position: relative;
+  height: 60vh;
+  overflow: hidden; /* Prevent image overflow on mobile */
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure image fills container */
+  filter: brightness(0.8); /* Adjust brightness for better text visibility */
+}
+
+.hero-title {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 2.5rem; /* Increase hero title size */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add subtle text shadow */
+}
+
+.content {
+  padding: 0 2rem;
+}
+
+.services-heading {
+  color: #24305e; /* Example color from a potential palette */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.service-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-top: 1.5rem;
+  color: #333; /* Adjust text color for better contrast */
+}
+
+.service-description p {
+  margin-bottom: 1rem;
+}
+
+.services-list {
+  margin: 1rem 0;
+}
+
+.services-list li {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments (already included in your code

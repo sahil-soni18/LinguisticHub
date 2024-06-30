@@ -1,0 +1,55 @@
+.hoverEffect:hover {
+    color: aqua;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+.sticky-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #212529; /* Adjust background color as desired */
+    color: #fff; /* Adjust text color as desired */
+    padding: 1rem 2rem; /* Adjust padding for spacing */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: top 0.3s ease-in-out; /* Smooth transition for sticky behavior */
+    z-index: 1000;
+  }
+  
+  .navbar-brand-link {
+    text-decoration: none;
+  }
+  
+  .logo-container {
+    padding: 0.5rem 1rem; /* Padding around the logo */
+    border-radius: 8px; /* Rounded corners for the logo container */
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-container:hover {
+    transform: scale(1.05);
+  }
+  
+  .logo {
+    background-color: #fff;
+    height: 60px; /* Increase logo height for better visibility */
+  }
+  
+  .nav-link {
+    margin-right: 20px;
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold;
+    color: #fff; /* Ensure links are white to contrast against the dark background */
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link.active {
+    color: #007bff; /* Highlight color for active link */
+  }
+  
+  .nav-link:hover {
+    color: #ccc; /* Lighter color on hover for better user experience */
+  }
+  
